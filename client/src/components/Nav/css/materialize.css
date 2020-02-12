@@ -1,0 +1,18 @@
+
+.nav-wrapper {
+    display: inline-flex;
+    list-style-type: none;
+    min-width: 100%;
+}
+
+li {
+    list-style-type: none;
+    /* min-width: 100%; */
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+#links {
+    display: inline-flex;
+  
+}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import DeleteBtn from "../components/DeleteBtn";
-import Jumbotron from "../components/Jumbotron";
+import Carousel from "../components/Carousel";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
@@ -57,9 +57,9 @@ function Books() {
 
   return (
     <Container fluid>
-      <Jumbotron>
+      <Carousel>
         {/* <h1>What Books Should I Read?</h1> */}
-      </Jumbotron>
+      </Carousel>
       <Row>
         <Col size="md-6">
           <form>

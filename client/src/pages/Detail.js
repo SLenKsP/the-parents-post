@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
-import Jumbotron from "../components/Jumbotron";
+import Articles from "../components/Articles";
+import { List } from "../components/List";
+import Activities from "../components/Activities";
 import API from "../utils/API";
+import Carousel from "../components/Carousel";
 
 function Detail(props) {
   const [book, setBook] = useState({})
@@ -17,30 +20,43 @@ function Detail(props) {
 
   return (
     <Container fluid>
-      {/* <Row>
-        <Col size="md-12">
-          <Jumbotron>
-              <h1>
-                {book.title} by {book.author}
-              </h1>
-            </Jumbotron>
-        </Col>
-      </Row> */}
       <Row>
-        <Col size="md-10 md-offset-1">
+        <Col size="md-12">
+          <Carousel>
+            <h1>
+              {book.title} by {book.author}
+            </h1>
+          </Carousel>
+        </Col>
+      </Row>
+      <Row>
+        <Col size="md-6">
           <article>
-            <h1>Synopsis</h1>
+            <h1>New Articles</h1>
             <p>
-              {book.synopsis}
+              {/* <List>
+                <Articles>
+                  {book.synopsis}
+                </Articles>
+              </List> */}
+
             </p>
           </article>
         </Col>
+        <Col size="md-6">
+          <activity>
+            <h1>Activities Near You</h1>
+            <p>
+
+            </p>
+          </activity>
+        </Col>
       </Row>
-      <Row>
+      {/* <Row>
         <Col size="md-2">
           <Link to="/">← Back to Authors</Link>
         </Col>
-      </Row>
+      </Row> */}
     </Container>
   );
 }

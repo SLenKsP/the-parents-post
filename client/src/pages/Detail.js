@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
-import Articles from "../components/Articles";
+import ArticleList from "../components/ArticleList";
 import { List } from "../components/List";
-import Activities from "../components/Activities";
+import ActivityList from "../components/ActivityList";
 import API from "../utils/API";
 import Carousel from "../components/Carousel";
 
@@ -34,12 +34,13 @@ function Detail(props) {
           <article>
             <h1>New Articles</h1>
             <p>
+              {/* <ArticleList> */}
               {/* <List>
                 <Articles>
                   {book.synopsis}
                 </Articles>
               </List> */}
-
+              {/* </ArticleList> */}
             </p>
           </article>
         </Col>

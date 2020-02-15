@@ -1,0 +1,34 @@
+
+
+
+nav {
+    margin-bottom: 50px;
+    min-width: 100%;
+    line-height: 100px;
+}
+
+.logo {
+    margin-right: 100px;
+}
+
+.slick-slide img {
+    margin: auto;
+    /* height: 440px;
+    width: 600px; */
+}
+
+.slick-dots {
+    margin-top: 30px;
+}
+
+.carousel {
+    margin-bottom: 50px;
+}
+
+article h1 {
+    text-align: center;
+}
+
+activity h1 {
+    text-align: center;
+}

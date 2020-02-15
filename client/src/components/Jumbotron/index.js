@@ -1,6 +1,8 @@
 // import React, { Component } from "react";
 // import Slider from "react-slick";
 // import "./css/materialize.css";
+import React, { Component } from 'react'
+import Slider from 'react-slick'
 
 // function Jumbotron({ children }) {
 //   return (
@@ -14,7 +16,6 @@
 // }
 
 // export default Jumbotron;
-
 
 // new carousel
 // export default class SimpleSlider extends React.Component {
@@ -57,6 +58,35 @@
 //     )
 //   }
 // }
+export default class SimpleSlider extends Component {
+  render() {
+    const settings = {
+      dots: true,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      fade: true,
+      cssEase: 'linear',
+      adaptiveHeight: true,
+      // rtl: true, // Reverses the slide order? I don't think we need this
+    }
+    return (
+      <div>
+        <Slider {...settings}>
+          <div>
+            <img className="responsive-img materialboxed" src="/assets/images/carousel1.jpeg" />
+          </div>
+          <div>
+            <img className="responsive-img materialboxed" src="/assets/images/carousel2.jpeg" />
+          </div>
+          <div>
+            <img className="responsive-img materialboxed" src="/assets/images/carousel3.jpeg" />
+          </div>
+        </Slider>
+      </div>
+    )
+  }
+}
 
 // function Jumbotron() {
 //   return (

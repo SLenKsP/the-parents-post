@@ -4,6 +4,7 @@ import { Col, Row, Container } from "../components/Grid";
 import ArticleList from "../components/ArticleList";
 import { List } from "../components/List";
 import ActivityList from "../components/ActivityList";
+import Footer from "../components/Footer";
 import API from "../utils/API";
 import Carousel from "../components/Carousel";
 
@@ -58,6 +59,7 @@ function Detail(props) {
           <Link to="/">← Back to Authors</Link>
         </Col>
       </Row> */}
+      <Footer />
     </Container>
   );
 }

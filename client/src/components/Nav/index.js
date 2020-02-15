@@ -17,7 +17,7 @@ class Nav extends React.Component {
         <div className="nav-wrapper">
           <div className="logo">
             <a href="#!" className="brand-logo">
-              The Parents Post<i class="large material-icons left">child_care</i>
+              The Parents Post<i className="large material-icons left">child_care</i>
             </a>
           </div>
           <div className="nav-list">

@@ -8,31 +8,42 @@ import 'jquery/src/jquery'
 // materialize
 // import 'materialize-css/dist/css/materialize.min.css';
 
-function App() {
-  return (
-    <Router>
-      <div>
-        {/* <script
+// function App() {
+
+class App extends React.Component {
+  componentDidMount() {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      // do_something(position.coords.latitude, position.coords.longitude);
+      console.log('Achievied location', position.coords.latitude, position.coords.longitude)
+    })
+  }
+
+  render() {
+    return (
+      <Router>
+        <div>
+          {/* <script
           src="https://code.jquery.com/jquery-3.4.1.min.js"
           integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
           crossorigin="anonymous"
         ></script> */}
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-        />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+          <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+          />
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-        <Nav />
-        <Switch>
-          <Route exact path="/" component={Detail} />
-          <Route exact path="/books" component={Books} />
-          <Route exact path="/books/:id" component={Detail} />
-          <Route component={NoMatch} />
-        </Switch>
-      </div>
-    </Router>
-  )
+          <Nav />
+          <Switch>
+            <Route exact path="/" component={Detail} />
+            <Route exact path="/books" component={Books} />
+            <Route exact path="/books/:id" component={Detail} />
+            <Route component={NoMatch} />
+          </Switch>
+        </div>
+      </Router>
+    )
+  }
 }
 
 export default App

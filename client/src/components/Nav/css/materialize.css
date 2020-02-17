@@ -32,3 +32,18 @@ article h1 {
 activity h1 {
     text-align: center;
 }
+
+.footer {
+    min-height: 100px;
+    position: relative;
+    text-align: center;
+  }
+  
+  .footer span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 3px;
+   
+  }

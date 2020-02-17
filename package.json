@@ -21,24 +21,18 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-<<<<<<< HEAD
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
-    "express": "^4.17.1",
+    "express": "^4.16.3",
     "gravatar": "^1.8.0",
     "if-env": "^1.0.4",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.1",
+    "mongoose": "^5.3.16",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
-    "validator": "^12.2.0"
-=======
-    "express": "^4.16.3",
-    "if-env": "^1.0.4",
-    "mongoose": "^5.3.16",
+    "validator": "^12.2.0",
     "react-materialize": "^3.5.9",
     "react-slick": "^0.25.2",
     "slick-carousel": "^1.8.1"
->>>>>>> a3864e462a0f5ea2726008e72c1172b25c4f26cc
   }
 }

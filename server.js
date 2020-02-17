@@ -7,7 +7,9 @@ const PORT = process.env.PORT || 3001;
 const users = require("./routes/api/login");
 
 // Define middleware here
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({
+  extended: true
+}));
 app.use(express.json());
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
@@ -17,19 +19,24 @@ if (process.env.NODE_ENV === "production") {
 app.use(passport.initialize());
 require("./passport")(passport);
 
+const MONGODB_URI =
+  process.env.MONGODB_URI || `mongodb://localhost/parentspost`;
 // Connect to the Mongo DB
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist"
-);
-app.use(bodyParser.urlencoded({ extended: false }));
+mongoose.connect(MONGODB_URI, {
+  useNewUrlParser: true,
+  seUnifiedTopology: true
+});
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
 app.use(bodyParser.json());
 
 app.use("/api/users", users);
-app.get("/", function(req, res) {
+app.get("/", function (req, res) {
   res.send("hello");
 });
 
 // Start the API server
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });

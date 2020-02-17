@@ -12,9 +12,8 @@ import 'jquery/src/jquery'
 
 class App extends React.Component {
   componentDidMount() {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      // do_something(position.coords.latitude, position.coords.longitude);
-      console.log('Achievied location', position.coords.latitude, position.coords.longitude)
+    navigator.geolocation.getCurrentPosition(function (position) {
+      console.log('Achieved location', position.coords.latitude, position.coords.longitude)
     })
   }
 
@@ -22,11 +21,6 @@ class App extends React.Component {
     return (
       <Router>
         <div>
-          {/* <script
-          src="https://code.jquery.com/jquery-3.4.1.min.js"
-          integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-          crossorigin="anonymous"
-        ></script> */}
           <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"

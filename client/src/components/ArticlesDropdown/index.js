@@ -4,7 +4,7 @@ function ArticlesDropdown() {
 
     return (
         <div>
-            <ul id="dropdown2" class="dropdown-content">
+            <ul id="dropdown2" className="dropdown-content">
                 <li><a href="#!">Health</a></li>
                 <li><a href="#!">Development</a></li>
                 <li><a href="#!">Sleep</a></li>

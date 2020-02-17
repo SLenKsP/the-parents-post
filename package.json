@@ -27,12 +27,13 @@
     "gravatar": "^1.8.0",
     "if-env": "^1.0.4",
     "jsonwebtoken": "^8.5.1",
+    "materialize-css": "^1.0.0",
     "mongoose": "^5.3.16",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
-    "validator": "^12.2.0",
     "react-materialize": "^3.5.9",
     "react-slick": "^0.25.2",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "validator": "^12.2.0"
   }
 }

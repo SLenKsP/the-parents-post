@@ -3,15 +3,14 @@ import './css/materialize.css'
 import M from 'materialize-css'
 import { Dropdown, Icon, Divider } from 'react-materialize'
 import ReactDOM from 'react-dom'
-
+import Modal from "../Modal";
 class Nav extends React.Component {
-  componentDidMount() {
+  componentDidMount () {
     // ReactDOM.findDOMNode(this)
     //   .getElementsByClassName('snap')
     //   .dropdown()
   }
-
-  render() {
+  render () {
     return (
       <nav>
         <div className="nav-wrapper">
@@ -22,10 +21,10 @@ class Nav extends React.Component {
           </div>
           <div className="nav-list">
             <ul className="right" id="links">
-              {/* <-- Dropdown Trigger -->  */}
+              {/* <-- Dropdown Trigger -->  */ }
               <li className="nav-links">
                 <Dropdown
-                  options={{
+                  options={ {
                     alignment: 'left',
                     autoTrigger: true,
                     closeOnClick: true,
@@ -39,7 +38,7 @@ class Nav extends React.Component {
                     onOpenEnd: null,
                     onOpenStart: null,
                     outDuration: 250,
-                  }}
+                  } }
                   trigger={
                     <a href="#!">
                       Activities <Icon right>arrow_drop_down</Icon>
@@ -48,14 +47,14 @@ class Nav extends React.Component {
                 >
                   <a href="#">Sports</a>
                   <a href="#">Camp</a>
-                  {/* <Divider /> */}
+                  {/* <Divider /> */ }
                   <a href="#">Art</a>
                   <a href="#">Placeholder</a>
                 </Dropdown>
               </li>
               <li className="nav-links">
                 <Dropdown
-                  options={{
+                  options={ {
                     alignment: 'left',
                     autoTrigger: true,
                     closeOnClick: true,
@@ -69,7 +68,7 @@ class Nav extends React.Component {
                     onOpenEnd: null,
                     onOpenStart: null,
                     outDuration: 250,
-                  }}
+                  } }
                   trigger={
                     <a href="#!">
                       Articles <Icon right>arrow_drop_down</Icon>
@@ -78,14 +77,14 @@ class Nav extends React.Component {
                 >
                   <a href="#">Health</a>
                   <a href="#">Development</a>
-                  {/* <Divider /> */}
+                  {/* <Divider /> */ }
                   <a href="#">Sleep</a>
                   <a href="#">Discipline/Behavior</a>
                 </Dropdown>
               </li>
               <li>
                 <Dropdown
-                  options={{
+                  options={ {
                     alignment: 'left',
                     autoTrigger: true,
                     closeOnClick: true,
@@ -99,7 +98,7 @@ class Nav extends React.Component {
                     onOpenEnd: null,
                     onOpenStart: null,
                     outDuration: 250,
-                  }}
+                  } }
                   trigger={
                     <a href="#!">
                       Dropdown <Icon right>arrow_drop_down</Icon>
@@ -112,11 +111,7 @@ class Nav extends React.Component {
                   <a href="#">three</a>
                 </Dropdown>
               </li>
-              <li className="nav-links">
-                <a href="#!" className="login">
-                  Sign In | Sign Up
-                </a>
-              </li>
+              <Modal />
             </ul>
           </div>
         </div>
@@ -124,6 +119,4 @@ class Nav extends React.Component {
     )
   }
 }
-
-
-export default Nav
+export default Nav;

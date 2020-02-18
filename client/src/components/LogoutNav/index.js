@@ -2,21 +2,25 @@ import React from 'react'
 import './css/materialize.css'
 import M from 'materialize-css'
 import { Dropdown, Icon, Divider } from 'react-materialize'
-import ReactDOM from 'react-dom'
-import SignUpModal from "../SignUpModal";
-import SignInModal from "../SignInModal";
-class Nav extends React.Component {
+import Logout from "../Logout";
+import MyAccount from "../UserAccount";
+
+class LogoutNav extends React.Component {
   componentDidMount () {
     // ReactDOM.findDOMNode(this)
     //   .getElementsByClassName('snap')
     //   .dropdown()
+  }
+  onLogout (e) {
+    e.preventDefault();
+    this.props.logoutUser(this.props.history);
   }
   render () {
     return (
       <nav>
         <div className="nav-wrapper">
           <div className="logo">
-            <a href="/" className="brand-logo">
+            <a href="/signin" className="brand-logo">
               The Parents Post<i className="large material-icons left">child_care</i>
             </a>
           </div>
@@ -112,8 +116,8 @@ class Nav extends React.Component {
                   <a href="#">three</a>
                 </Dropdown>
               </li>
-              <SignUpModal />
-              <SignInModal />
+              <MyAccount />
+              <Logout />
             </ul>
           </div>
         </div>
@@ -121,4 +125,5 @@ class Nav extends React.Component {
     )
   }
 }
-export default Nav;
+
+export default LogoutNav;

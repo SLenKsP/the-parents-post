@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import M from "materialize-css";
 import "materialize-css/dist/css/materialize.min.css";
-import SignUp from "../SignUp/index";
-class Modal extends Component {
+import SignIn from "../SignIn/index";
+
+class SignInModal extends Component {
     componentDidMount () {
         const options = {
             onOpenStart: () => {
@@ -32,28 +33,26 @@ class Modal extends Component {
             <>
                 <a
                     className="waves-effect waves-light btn modal-trigger"
-                    data-target="modal1"
+                    data-target="modal2"
                 >
-                    Sign In | Sign Up
+                    Sign In
         </a>
 
                 <div
                     ref={ Modal => {
                         this.Modal = Modal;
                     } }
-                    id="modal1"
+                    id="modal2"
                     className="modal"
                 >
                     <div className="modal-content blue-text">
-                        <SignUp />
+                        <SignIn />
                     </div>
                     <div className="modal-footer">
                         <a href="#" className="modal-close waves-effect waves-red btn-flat">
                             Cancel
                         </a>
-                        <a href="#" className="modal-close waves-effect waves-green btn-flat">
-                            Submit
-                        </a>
+                        
                     </div>
                 </div>
             </>
@@ -61,4 +60,4 @@ class Modal extends Component {
     }
 }
 
-export default Modal;
+export default SignInModal;

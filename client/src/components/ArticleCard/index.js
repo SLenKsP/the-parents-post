@@ -20,8 +20,8 @@ class ArticleCard extends React.Component {
     render() {
 
         return (
-            <div className="article-card">
-                <h2>{this.props.title}</h2>
+            <div className="card-panel hoverable">
+                <h4>{this.props.title}</h4>
                 <a href={this.props.url}>To Article</a>
                 <p>Description: {this.props.summary}</p>
                 <button

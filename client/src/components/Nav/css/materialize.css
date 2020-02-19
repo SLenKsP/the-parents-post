@@ -1,14 +1,27 @@
 
-
+body {
+    font-family: 'Cinzel', serif;
+    /* font-family: 'Luckiest Guy', cursive; */
+}
 
 nav {
     margin-bottom: 50px;
     min-width: 100%;
-    line-height: 100px;
+    line-height: 150px;
+}
+
+.nav-wrapper {
+    /* background-color: #546e7a; */
+    background-color: #01579b;
 }
 
 .logo {
     margin-right: 100px;
+    /* font-family: 'Luckiest Guy', cursive; */
+}
+
+.nav-list {
+    font-size: 30px;
 }
 
 .slick-slide img {
@@ -25,18 +38,30 @@ nav {
     margin-bottom: 50px;
 }
 
-article h1 {
+h2 {
     text-align: center;
+    font-family: 'Cinzel', serif;
+    color: white;
 }
 
-activity h1 {
-    text-align: center;
+.article-list-container {
+    background-color: #01579b;
+}
+
+.card-panel {
+    opacity: .8;
+}
+
+.card-panel button {
+    background-color: #01579b;
+    font-family: 'Cinzel', serif;
 }
 
 .footer {
     min-height: 100px;
     position: relative;
     text-align: center;
+    font-weight: bold;
   }
   
   .footer span {

@@ -24,9 +24,6 @@ function Detail(props) {
       <Row>
         <Col size="md-12">
           <Carousel>
-            {/* <h1>
-              {book.title} by {book.author}
-            </h1> */}
           </Carousel>
         </Col>
       </Row>
@@ -419,12 +416,10 @@ function Detail(props) {
           </ArticleList>
         </Col>
         <Col size="md-6">
-          {/* <activity> */}
-          <h1>Activities Near You</h1>
+          <h2>Activities Near You</h2>
           <p>
 
           </p>
-          {/* </activity> */}
         </Col>
       </Row>
       {/* <Row>

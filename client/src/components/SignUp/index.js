@@ -108,9 +108,9 @@ class SignUp extends Component {
                         { errors.password_confirm && (<div className="invalid-feedback">{ errors.password_confirm }</div>) }
                     </div>
                     <div className="form-group">
-                        <button type="submit" to= "/signin" className="btn btn-primary">
+                        <button type="submit" className="btn btn-primary">
                             Sign Up User
-                    </button>
+                        </button>
                     </div>
                 </form>
             </div>

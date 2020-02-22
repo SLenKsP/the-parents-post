@@ -17,46 +17,45 @@ import Home from "./pages/Home";
 // import 'materialize-css/dist/css/materialize.min.css';
 
 // function App() {
-if (localStorage.jwtToken)
-{
+if (localStorage.jwtToken) {
   setAuthToken(localStorage.jwtToken);
   const decoded = jwt_decode(localStorage.jwtToken);
   store.dispatch(setCurrentUser(decoded));
 
   const currentTime = Date.now() / 1000;
-  if (decoded.exp < currentTime)
-  {
+  if (decoded.exp < currentTime) {
     store.dispatch(logoutUser());
     window.location.href = '/signin'
   }
 }
 class App extends React.Component {
-  componentDidMount () {
+  componentDidMount() {
     navigator.geolocation.getCurrentPosition(function (position) {
       console.log('Achieved location', position.coords.latitude, position.coords.longitude)
     })
   }
 
-  render () {
+  render() {
     return (
-      <Provider store={ store } >
+      <Provider store={store} >
         <Router>
           <div>
             <link
               rel="stylesheet"
               href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
             />
+            <link href="https://fonts.googleapis.com/css?family=Cinzel:700|Luckiest+Guy&display=swap" rel="stylesheet"></link>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 
             <Switch>
-              <Route exact path="/" component={ Home } />
+              <Route exact path="/" component={Home} />
               {/* <Route exact path="/books" component={ Books } />
               <Route exact path="/books/:id" component={ Detail } /> */}
-              {/* <Route exact path="/signup" component={ SignUp } /> */ }
-              <Route exact path="/signin" component={ SignIn } />
-              <Route exact path="/useraccount" component={ UserAccount } />
-              {/* <Route component={ NoMatch } /> */ }
+              {/* <Route exact path="/signup" component={ SignUp } /> */}
+              <Route exact path="/signin" component={SignIn} />
+              <Route exact path="/useraccount" component={UserAccount} />
+              {/* <Route component={ NoMatch } /> */}
 
             </Switch>
           </div>

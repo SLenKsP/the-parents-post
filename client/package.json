@@ -1,8 +1,9 @@
 {
-  "name": "mern",
+  "name": "the-parents-post",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001/",
+  "homepage": ".",
   "dependencies": {
     "axios": "^0.18.0",
     "classnames": "^2.2.6",

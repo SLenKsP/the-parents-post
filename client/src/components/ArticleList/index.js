@@ -8,16 +8,20 @@ class ArticleList extends React.Component {
         return (
             <div className="article-list-container">
                 <h2 className="article-list-title">Articles</h2>
-                {this.props.results.map(article => (
-                    <ArticleCard
-                        title={article.assetName}
-                        url={article.contactPhone}
-
-                    // key={article._id}
-                    // id={article._id}
-                    />
-                )
-                )}
+                {
+                    // console.log((this.props.results))
+                    // filter(element => element.registrationUrlAdr != "" ? true : false)
+                    Object.values(this.props.results).map(article => (
+                        <ArticleCard
+                            title={article.assetName}
+                            url={article.urlAdr}
+                            summary={article.assetDescriptions[0].description || ""}
+                        // key={article._id}
+                        // id={article._id}
+                        />
+                    )
+                    )
+                }
             </div>
         )
     }

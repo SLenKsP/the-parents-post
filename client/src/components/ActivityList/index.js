@@ -8,16 +8,19 @@ class ActivityList extends React.Component {
         return (
             <div className="activity-list-container">
                 <h2 className="activity-list-title">Activities</h2>
-                {this.props.results.map(article => (
-                    <ActivityCard
-                        title={article.headline.main}
-                        url={article.web_url}
-                        // date={article.pub_date}
-                        key={article._id}
-                        id={article._id}
-                    />
-                )
-                )}
+                {
+                    // console.log(Object.values(this.props.results))
+                    Object.values(this.props.results).filter(element => element.registrationUrlAdr != "" ? true : false).map(article => (
+                        <ActivityCard
+                            title={article.assetName}
+                            url={article.urlAdr}
+                            summary={article.assetDescriptions[0].description || ""}
+                        //         // date={article.pub_date}
+                        //         key={article._id}
+                        //         id={article._id}
+                        />
+                    ))
+                }
             </div>
         )
     }

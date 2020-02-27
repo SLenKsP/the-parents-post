@@ -1,11 +1,13 @@
 import React from "react";
 import ArticleCard from "../ArticleCard";
+import ScrollReveal from 'scrollreveal';
 
 class ArticleList extends React.Component {
 
     render() {
 
         return (
+
             <div className="article-list-container">
                 <h2 className="article-list-title">Articles</h2>
                 {
@@ -27,4 +29,8 @@ class ArticleList extends React.Component {
     }
 };
 
+ScrollReveal().reveal('article-list-container')
+
+
 export default ArticleList;
+

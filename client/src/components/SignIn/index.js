@@ -81,7 +81,7 @@ class SignIn extends Component {
             )}
           </div>
           <div className="form-group">
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn">
               Sign in User
             </button>
           </div>

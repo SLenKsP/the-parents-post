@@ -46,7 +46,7 @@ class App extends React.Component {
             />
             <link href="https://fonts.googleapis.com/css?family=Cinzel:700|Luckiest+Guy&display=swap" rel="stylesheet"></link>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+            <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
             <Switch>
               <Route exact path="/" component={Home} />

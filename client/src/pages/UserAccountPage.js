@@ -10,8 +10,8 @@ import Footer from "../components/Footer";
 import API from "../utils/API";
 import Carousel from "../components/Carousel";
 
-function UserAccountPage (props) {
-    const [ book, setBook ] = useState({})
+function UserAccountPage(props) {
+    const [book, setBook] = useState({})
 
     // When this component mounts, grab the book with the _id of props.match.params.id
     // e.g. localhost:3000/books/599dcb67f0f16317844583fc
@@ -35,7 +35,7 @@ function UserAccountPage (props) {
             </Row>
             <Row>
                 <Col size="md-6">
-                    <ArticleList results={ [ {
+                    <ArticleList results={[{
                         "assetTopics": [
                             {
                                 "sequence": 1,
@@ -417,17 +417,12 @@ function UserAccountPage (props) {
                         "searchScore": 188.56271,
                         "assetVersion": 8,
                         "salesStatus": "registration-open"
-                    } ] }>
+                    }]}>
 
                     </ArticleList>
                 </Col>
                 <Col size="md-6">
-                    {/* <activity> */ }
-                    <h1>Activities Near You</h1>
-                    <p>
-
-                    </p>
-                    {/* </activity> */ }
+                    {/* <ActivityList></ActivityList> */}
                 </Col>
             </Row>
             {/* <Row>
@@ -436,7 +431,7 @@ function UserAccountPage (props) {
         </Col>
       </Row> */}
             <Footer />
-        </Container>
+        </Container >
     );
 }
 // export default Detail;

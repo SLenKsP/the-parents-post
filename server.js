@@ -5,6 +5,7 @@ const app = express();
 const passport = require("passport");
 const PORT = process.env.PORT || 3001;
 const users = require("./routes/api/login");
+const articles = require("./routes/api/articles");
 
 // Define middleware here
 app.use(express.urlencoded({
@@ -30,6 +31,12 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 app.use(bodyParser.json());
+
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
+// app.use("/api/articles/", articles)
 
 app.use("/api/users", users);
 app.get("/", function (req, res) {

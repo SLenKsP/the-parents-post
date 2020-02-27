@@ -89,7 +89,11 @@ class SignIn extends Component {
             ) }
           </div>
           <div className="form-group">
+<<<<<<< HEAD
             <button type="submit" className="waves-effect waves-light btn">
+=======
+            <button type="submit" className="btn">
+>>>>>>> 8b3b006f9d500f26ea0f672ae61ae0daa8050329
               Sign in User
             </button>
           </div>

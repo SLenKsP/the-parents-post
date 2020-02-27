@@ -4,7 +4,7 @@ import "materialize-css/dist/css/materialize.min.css";
 import SignIn from "../SignIn/index";
 
 class SignInModal extends Component {
-    componentDidMount () {
+    componentDidMount() {
         const options = {
             onOpenStart: () => {
                 console.log("Open Start");
@@ -28,7 +28,7 @@ class SignInModal extends Component {
         M.Modal.init(this.Modal, options);
     }
 
-    render () {
+    render() {
         return (
             <>
                 <a
@@ -39,9 +39,9 @@ class SignInModal extends Component {
         </a>
 
                 <div
-                    ref={ Modal => {
+                    ref={Modal => {
                         this.Modal = Modal;
-                    } }
+                    }}
                     id="modal2"
                     className="modal"
                 >
@@ -52,7 +52,7 @@ class SignInModal extends Component {
                         <a href="#" className="modal-close waves-effect waves-red btn-flat">
                             Cancel
                         </a>
-                        
+
                     </div>
                 </div>
             </>

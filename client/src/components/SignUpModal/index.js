@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import M from "materialize-css";
 import "materialize-css/dist/css/materialize.min.css";
 import SignUp from "../SignUp/index";
+
 class SignUpModal extends Component {
+
     componentDidMount () {
         const options = {
             onOpenStart: () => {
@@ -47,13 +49,12 @@ class SignUpModal extends Component {
                     <div className="modal-content blue-text">
                         <SignUp />
                     </div>
-                    <div className="modal-footer">
+                    < div className="modal-footer"
+                    >
                         <a href="#" className="modal-close waves-effect waves-red btn-flat">
                             Cancel
                         </a>
-                        <a href="#" className="modal-close waves-effect waves-green btn-flat">
-                            Submit
-                        </a>
+                       
                     </div>
                 </div>
             </>

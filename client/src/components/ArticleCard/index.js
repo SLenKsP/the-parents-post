@@ -17,17 +17,17 @@ class ArticleCard extends React.Component {
             .catch(err => console.log(err));
     }
 
-    render() {
+    render () {
 
         return (
             <div className="card-panel hoverable">
-                <h4>{this.props.title}</h4>
-                <a href={this.props.url}>To Article</a>
-                <p>Description: {this.props.summary}</p>
+                <h4>{ this.props.title }</h4>
+                <a href={ this.props.url }>To Article</a>
+                <p>Description: { this.props.summary }</p>
                 <button
                     className="btn btn-primary"
-                    value={this.props.id}
-                    onClick={this.handleFormSubmit}
+                    value={ this.props.id }
+                    onClick={ this.handleFormSubmit }
                 >Save Article</button>
             </div>
 

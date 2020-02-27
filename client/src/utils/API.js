@@ -24,6 +24,24 @@ export default {
     return axios.get(articleQueryURL + activity);
     // return axios.get("/api/activities/");
   },
+  saveActivity: function (activityData) {
+    return axios.post("/api/activities" + activityData)
+  },
+  saveArticle: function (articleData) {
+    return axios.post("/api/articles" + articleData)
+  },
+  getSavedArticles: function (articles) {
+    return axios.get("/api/articles" + articles)
+  },
+  getSavedActivities: function (activities) {
+    return axios.get("/api/activities" + activities)
+  },
+  deleteArticle: function (articleId) {
+    return axios.delete("/api/articles" + articleId)
+  },
+  deleteActivity: function (activityId) {
+    return axios.delete("/api/activities" + activityId)
+  },
   // Gets the book with the given id
   getBook: function (id) {
     return axios.get("/api/books/" + id);

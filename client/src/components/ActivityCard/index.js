@@ -8,7 +8,7 @@ class ActivityCard extends React.Component {
     handleFormSubmit = event => {
         event.preventDefault();
         console.log('submitting form');
-        API.saveArticle({
+        API.saveActivity({
             title: this.props.title,
             summary: this.props.summary,
             url: this.props.url
@@ -22,7 +22,7 @@ class ActivityCard extends React.Component {
         return (
             <div className="card-panel hoverable">
                 <h4>{this.props.title}</h4>
-                <a href={this.props.url}>To Article</a>
+                <a href={this.props.url}>To Activity</a>
                 <p>Description: {this.props.summary}</p>
                 <button
                     className="btn btn-primary"

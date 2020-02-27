@@ -6,7 +6,7 @@ import classnames from "classnames";
 import { withRouter } from "react-router-dom";
 
 class SignIn extends Component {
-  constructor() {
+  constructor () {
     super();
     this.state = {
       email: "",
@@ -17,13 +17,13 @@ class SignIn extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleInputChange(e) {
+  handleInputChange (e) {
     this.setState({
-      [e.target.name]: e.target.value
+      [ e.target.name ]: e.target.value
     });
   }
 
-  handleSubmit(e) {
+  handleSubmit (e) {
     e.preventDefault();
     const user = {
       email: this.state.email,
@@ -31,57 +31,65 @@ class SignIn extends Component {
     };
     this.props.signInUser(user, this.props.history);
   }
-  componentDidMount() {
-    if (this.props.auth.isAuthenticated) {
-      this.props.history.push("/");
+  componentDidMount () {
+    if (this.props.auth.isAuthenticated)
+    {
+      this.props.history.push("/signin");
     }
   }
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.errors) {
+  componentWillReceiveProps (nextProps) {
+    if (nextProps.auth.isAuthenticated)
+    {
+      this.props.history.push('/signin')
+    }
+    if (nextProps.errors)
+    {
       this.setState({
         errors: nextProps.errors
       });
     }
   }
 
-  render() {
+  render () {
     const { errors } = this.state;
     return (
-      <div className="container" style={{ marginTop: "50px", width: "700px" }}>
-        <h2 style={{ marginBottom: "40px" }}>Login</h2>
-        <form onSubmit={this.handleSubmit}>
+      <div className="container" style={ { marginTop: "0px", width: "700px" } }>
+        <h2 className="blue-text" style={ { marginBottom: "0px" } }>Login</h2>
+        <form onSubmit={ this.handleSubmit }>
           <div className="form-group">
             <input
               type="email"
               placeholder="Email"
-              className={classnames("form-control form-control-lg", {
+              className={ classnames("input-field input-field-lg", {
                 "is-invalid": errors.email
-              })}
+              }) }
               name="email"
-              onChange={this.handleInputChange}
-              value={this.state.email}
+              onChange={ this.handleInputChange }
+              value={ this.state.email }
             />
-            {errors.email && (
-              <div className="invalid-feedback">{errors.email}</div>
-            )}
+            {
+              console.log(`eroorrrr is ${ errors.email }`),
+              errors.email && (
+                <div className="invalid-feedback">{ errors.email }</div>
+              ) }
           </div>
           <div className="form-group">
             <input
               type="password"
               placeholder="Password"
-              className={classnames("form-control form-control-lg", {
+              className={ classnames("input-field input-field-lg", {
                 "is-invalid": errors.password
-              })}
+              }) }
               name="password"
-              onChange={this.handleInputChange}
-              value={this.state.password}
+              onChange={ this.handleInputChange }
+              value={ this.state.password }
             />
-            {errors.password && (
-              <div className="invalid-feedback">{errors.password}</div>
-            )}
+            { errors.password && (
+              <div className="invalid-feedback">{ errors.password }</div>
+            ) }
           </div>
           <div className="form-group">
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="waves-effect waves-light btn">
               Sign in User
             </button>
           </div>

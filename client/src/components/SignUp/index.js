@@ -34,8 +34,18 @@ class SignUp extends Component {
             password_confirm: this.state.password_confirm
         }
         this.props.signUpUser(user, this.props.history);
+        this.setState({
+            name: "",
+            email: "",
+            password: "",
+            password_confirm: ""
+        });
     }
     componentWillReceiveProps (nextProps) {
+        if (nextProps.auth.isAuthenticated)
+        {
+            this.props.history.push('/signin')
+        }
         if (nextProps.errors)
         {
             this.setState({
@@ -46,20 +56,20 @@ class SignUp extends Component {
     componentDidMount () {
         if (this.props.auth.isAuthenticated)
         {
-            this.props.history.push('/');
+            this.props.history.push('/signin');
         }
     }
     render () {
         const { errors } = this.state;
         return (
-            <div className="container" style={ { marginTop: '50px', width: '700px' } }>
-                <h2 style={ { marginBottom: '40px' } }>Registration</h2>
+            <div className="container" style={ { marginTop: '0px', width: '700px' } }>
+                <h2 className= "blue-text" style={ { marginBottom: '0px' } }>Sign Up</h2>
                 <form onSubmit={ this.handleSubmit }>
                     <div className="form-group">
                         <input
                             type="text"
                             placeholder="Name"
-                            className={ classnames('form-control form-control-lg', {
+                            className={ classnames('validate validate-lg', {
                                 'is-invalid': errors.name
                             }) }
                             name="name"
@@ -72,7 +82,7 @@ class SignUp extends Component {
                         <input
                             type="email"
                             placeholder="Email"
-                            className={ classnames('form-control form-control-lg', {
+                            className={ classnames('validate validate-lg', {
                                 'is-invalid': errors.email
                             }) }
                             name="email"
@@ -85,7 +95,7 @@ class SignUp extends Component {
                         <input
                             type="password"
                             placeholder="Password"
-                            className={ classnames('form-control form-control-lg', {
+                            className={ classnames('validate validate-lg', {
                                 'is-invalid': errors.password
                             }) }
                             name="password"
@@ -98,7 +108,7 @@ class SignUp extends Component {
                         <input
                             type="password"
                             placeholder="Confirm Password"
-                            className={ classnames('form-control form-control-lg', {
+                            className={ classnames('validate validate-lg', {
                                 'is-invalid': errors.password_confirm
                             }) }
                             name="password_confirm"

@@ -39,9 +39,7 @@ function Home(props) {
             <Row>
                 <Col size="md-12">
                     <Carousel>
-                        {/* <h1>
-              {book.title} by {book.author}
-            </h1> */}
+
                     </Carousel>
                 </Col>
             </Row>

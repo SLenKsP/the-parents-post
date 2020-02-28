@@ -3,7 +3,7 @@ import M from "materialize-css";
 import "materialize-css/dist/css/materialize.min.css";
 import SignUp from "../SignUp/index";
 class SignUpModal extends Component {
-    componentDidMount () {
+    componentDidMount() {
         const options = {
             onOpenStart: () => {
                 console.log("Open Start");
@@ -27,20 +27,20 @@ class SignUpModal extends Component {
         M.Modal.init(this.Modal, options);
     }
 
-    render () {
+    render() {
         return (
             <>
                 <a
-                    className="waves-effect waves-light btn modal-trigger"
+                    className="btn waves-effect waves-light modal-trigger"
                     data-target="modal1"
                 >
                     Sign Up
         </a>
 
                 <div
-                    ref={ Modal => {
+                    ref={Modal => {
                         this.Modal = Modal;
-                    } }
+                    }}
                     id="modal1"
                     className="modal"
                 >

@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 
-
 class UserAccount extends Component {
 
 
     render () {
         return (
-            <a className="waves-effect waves-light btn" href= "/useraccount">
+            <button className="accountBtn waves-effect waves-light btn" onClick={ event => window.location.href = '/useraccount' } >
                 My Account
-            </a>
+            </button>
         )
     }
 }

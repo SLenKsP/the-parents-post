@@ -58,5 +58,4 @@ function Home(props) {
         </Container>
     );
 }
-// export default Detail;
 export default Home;

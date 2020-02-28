@@ -4,8 +4,8 @@ import M from 'materialize-css'
 import { Dropdown, Icon, Divider } from 'react-materialize'
 import Logout from "../Logout";
 import MyAccount from "../UserAccount";
-// import Navbar from 'react-materialize/lib/Navbar'
-import Nav from "../Nav";
+import Navbar from 'react-materialize/lib/Navbar'
+// import Nav from "../Nav";
 
 class LogoutNav extends React.Component {
   componentDidMount() {
@@ -19,7 +19,7 @@ class LogoutNav extends React.Component {
   }
   render() {
     return (
-      <Nav
+      <Navbar
         alignLinks="right"
         brand={<a className="logo" href="/signin">The Parents Post<Icon>child_care</Icon></a>}
         menuIcon={<Icon>menu</Icon>}
@@ -96,7 +96,7 @@ class LogoutNav extends React.Component {
         </Dropdown>
         <MyAccount />
         <Logout />
-      </Nav>
+      </Navbar>
       // <nav>
       //   <div className="nav-wrapper">
       //     <div className="logo">

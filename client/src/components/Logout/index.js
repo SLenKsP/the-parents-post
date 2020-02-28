@@ -17,7 +17,7 @@ class Logout extends Component {
 
   render() {
       return <button
-          className="waves-effect waves-light btn"
+          className="logoutBtn waves-effect waves-light btn"
           onClick= {this.onLogout}
       >Logout</button>;
   }

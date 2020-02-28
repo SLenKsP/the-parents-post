@@ -13,7 +13,10 @@ nav {
     /* height: 440px;
     width: 600px; */
 }
-
+.accountBtn,
+.logoutBtn {
+    margin-right: 10px;
+}
 .slick-dots {
     margin-top: 30px;
 }
@@ -26,7 +29,7 @@ article h1 {
     text-align: center;
 }
 
-activity h1 {
+.activity h1 {
     text-align: center;
 }
 

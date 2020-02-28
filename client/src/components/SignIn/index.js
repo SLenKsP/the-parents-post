@@ -33,7 +33,7 @@ class SignIn extends Component {
   }
   componentDidMount() {
     if (this.props.auth.isAuthenticated) {
-      this.props.history.push("/");
+      this.props.history.push("/signin");
     }
   }
   componentWillReceiveProps(nextProps) {
@@ -81,7 +81,7 @@ class SignIn extends Component {
             )}
           </div>
           <div className="form-group">
-            <button type="submit" className="btn">
+            <button type="submit" className="waves-effect waves-light btn">
               Sign in User
             </button>
           </div>

@@ -5,7 +5,7 @@ import { Dropdown, Icon, Divider } from 'react-materialize'
 import Logout from "../Logout";
 import Navbar from 'react-materialize/lib/Navbar'
 
-class LogoutNav extends React.Component {
+class UserAccountNav extends React.Component {
   componentDidMount() {
     // ReactDOM.findDOMNode(this)
     //   .getElementsByClassName('snap')
@@ -202,4 +202,4 @@ class LogoutNav extends React.Component {
   }
 }
 
-export default LogoutNav;
+export default UserAccountNav;

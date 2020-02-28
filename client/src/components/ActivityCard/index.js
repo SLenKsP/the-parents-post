@@ -33,7 +33,7 @@ class ActivityCard extends React.Component {
             <div data-aos="flip-up">
                 <div className="card-panel hoverable">
                     <h5>{this.props.title}</h5>
-                    <a href={this.props.url}>To Article</a>
+                    <a href={this.props.url}>To Activity</a>
                     <p>Description: {this.props.summary}</p>
                     <button
                         className="btn waves-effect waves-light hoverable"

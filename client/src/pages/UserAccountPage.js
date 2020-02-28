@@ -11,6 +11,8 @@ import API from "../utils/API";
 import Carousel from "../components/Carousel";
 import _ from 'lodash';
 function UserAccountPage (props) {
+    const [ activity, setActivity ] = useState({})
+    const [ article, setArticle ] = useState({})
     useEffect(() => {
         console.log("GETTING ACTIVITIES!!!!!---------------------------------")
         API.getActivity('art')

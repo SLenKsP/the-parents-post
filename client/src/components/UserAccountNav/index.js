@@ -19,7 +19,7 @@ class UserAccountNav extends React.Component {
     return (
       <Navbar
         alignLinks="right"
-        brand={<a className="logo" href="#">The Parents Post<Icon>child_care</Icon></a>}
+        brand={<a className="logo" href="/signin">The Parents Post<Icon>child_care</Icon></a>}
         menuIcon={<Icon>menu</Icon>}
         options={{
           draggable: true,

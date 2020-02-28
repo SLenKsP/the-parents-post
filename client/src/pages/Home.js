@@ -9,7 +9,7 @@ import ActivityList from "../components/ActivityList";
 import Footer from "../components/Footer";
 import API from "../utils/API";
 import Carousel from "../components/Carousel";
-
+import _ from 'lodash';
 function Home(props) {
     const [activity, setActivity] = useState({})
     const [article, setArticle] = useState({})
@@ -19,17 +19,20 @@ function Home(props) {
     useEffect(() => {
         console.log("GETTING ACTIVITIES!!!!!---------------------------------")
         API.getActivity('art')
-            .then(res =>
-                // console.log("WE GOT THE DATA ", res.data)
-                setActivity(res.data.results)
-            )
+            .then(res => {
+                console.log("WE GOT THE DATA ", res.data.results);
+                var receivedData = res.data.results;
+                setActivity(_.uniqBy(receivedData, 'assetName'))
+            })
             .catch(err => console.log(err));
         console.log("GETTING Articles!!!!!---------------------------------")
         API.getArticles('dance')
-            .then(res =>
-                // console.log("WE GOT THE DATA ", res.data)
-                setArticle(res.data.results)
-            )
+            .then(res => {
+                console.log("WE GOT article DATA ", res.data.results)
+                var receivedArticleData = res.data.results;
+                setArticle(_.uniqBy(receivedArticleData, 'assetName'))
+                // setArticle(res.data.results)
+            })
             .catch(err => console.log(err));
     }, [])
 
@@ -51,11 +54,6 @@ function Home(props) {
                     <ActivityList results={activity}></ActivityList>
                 </Col>
             </Row>
-            {/* <Row>
-        <Col size="md-2">
-          <Link to="/">← Back to Authors</Link>
-        </Col>
-      </Row> */}
             <Footer />
         </Container>
     );

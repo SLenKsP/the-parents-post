@@ -9,6 +9,7 @@ class ArticleCard extends React.Component {
     handleFormSubmit = event => {
         event.preventDefault();
         console.log('submitting form');
+        console.log(`id is ${this.props.id}`);
         API.saveArticle({
             title: this.props.title,
             summary: this.props.summary,

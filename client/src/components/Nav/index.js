@@ -53,7 +53,7 @@ class Nav extends React.Component {
           }}
           trigger={
             <a href="#!">
-              Articles <Icon right>arrow_drop_down</Icon>
+              Activities <Icon right>arrow_drop_down</Icon>
             </a>
           }
         >
@@ -79,7 +79,7 @@ class Nav extends React.Component {
           }}
           trigger={
             <a href="#!">
-              Activities <Icon right>arrow_drop_down</Icon>
+              Articles <Icon right>arrow_drop_down</Icon>
             </a>
           }
         >

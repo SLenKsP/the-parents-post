@@ -3,8 +3,8 @@ import './css/materialize.css'
 import M from 'materialize-css'
 import { Dropdown, Icon, Divider } from 'react-materialize'
 import ReactDOM from 'react-dom'
-import SignUpModal from "../SignUpModal";
-import SignInModal from "../SignInModal";
+import SignUpModal from '../SignUpModal'
+import SignInModal from '../SignInModal'
 import Navbar from 'react-materialize/lib/Navbar'
 
 class Nav extends React.Component {
@@ -17,7 +17,11 @@ class Nav extends React.Component {
     return (
       <Navbar
         alignLinks="right"
-        brand={<a className="logo" href="/">The Parents Post<Icon>child_care</Icon></a>}
+        brand={
+          <a className="logo" href="/">
+            The Parents Post<Icon>child_care</Icon>
+          </a>
+        }
         menuIcon={<Icon>menu</Icon>}
         options={{
           draggable: true,
@@ -28,7 +32,7 @@ class Nav extends React.Component {
           onOpenEnd: null,
           onOpenStart: null,
           outDuration: 200,
-          preventScrolling: true
+          preventScrolling: true,
         }}
       >
         <Dropdown
@@ -45,19 +49,17 @@ class Nav extends React.Component {
             onCloseStart: null,
             onOpenEnd: null,
             onOpenStart: null,
-            outDuration: 250
+            outDuration: 250,
           }}
-          trigger={<a href="#!">Articles{' '}<Icon right>arrow_drop_down</Icon></a>}
+          trigger={
+            <a href="#!">
+              Articles <Icon right>arrow_drop_down</Icon>
+            </a>
+          }
         >
-          <a href="#">
-            Sports
-            </a>
-          <a href="#">
-            Art
-            </a>
-          <a href="#">
-            Camp
-            </a>
+          <a href="/sport">Sports</a>
+          <a href="/art">Art</a>
+          <a href="/camp">Camp</a>
         </Dropdown>
         <Dropdown
           options={{
@@ -73,22 +75,18 @@ class Nav extends React.Component {
             onCloseStart: null,
             onOpenEnd: null,
             onOpenStart: null,
-            outDuration: 250
+            outDuration: 250,
           }}
-          trigger={<a href="#!">Activities{' '}<Icon right>arrow_drop_down</Icon></a>}
+          trigger={
+            <a href="#!">
+              Activities <Icon right>arrow_drop_down</Icon>
+            </a>
+          }
         >
-          <a href="#">
-            Health
-            </a>
-          <a href="#">
-            Development
-            </a>
-          <a href="#">
-            Sleep
-            </a>
-          <a href="#">
-            Discipline/Behavior
-            </a>
+          <a href="/health">Health</a>
+          <a href="/development">Development</a>
+          <a href="/sleep">Sleep</a>
+          <a href="/behavior">Discipline/Behavior</a>
         </Dropdown>
         <SignUpModal />
         <SignInModal />
@@ -185,6 +183,5 @@ class Nav extends React.Component {
     //   )
     // }
   }
-
 }
-export default Nav;
+export default Nav
